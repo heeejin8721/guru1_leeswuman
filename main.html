@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1140px">
+	<title>main</title>
+	
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Noto+Sans+KR:wght@300&display=swap');
+		/*주아체와 Black Han Sans체, Noto Sans체가 적용 가능합니다!*/
+
+		body { 
+			width: 1920px;
+			padding: 0; margin: 0;
+			background-color: #252F52;
+			width: 100%;
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		a.top {
+			color: #171F36; font-weight: bold;
+			position: fixed;
+			right: 5%;
+			bottom: 50px; 
+			width: 50px; height: 50px;
+			background: linear-gradient(to bottom, #FFFFFF, #FBD8DF);
+			/*background-color: #FBD8DF;*/ 
+			border-radius: 50px;
+			text-align: center; line-height: 3em;
+			box-shadow: 2px 3px 2px black;
+			opacity: 0.8;
+		}
+
+		a {
+			text-decoration: none;
+			color: #505050;
+		}
+
+		header { height: 50px; }
+
+		header > h3 {
+			color: white; font-weight: normal;
+			margin-left: 200px; margin-top: 20px;
+			font-family: 'Jua', sans-serif; font-size: 25px;
+		}
+
+		nav { position: absolute; left: 650px; top:20px; 
+			font-size: 15px; }
+
+		nav > a {
+			color: white;
+			margin-right: 150px;
+			font-size: 18px;
+		}
+
+		footer { background-color: #2D2D2D; color: white;
+			font-size: 20px; text-align: right; padding-right: 140px;
+			padding-top: 15px; padding-bottom: 20px;
+			border-top: 2px solid #424B65;}
+
+		.up {
+			background-color: white;
+			width: 100%; height: 500px;
+		}
+
+		.logo {
+			width: 400px; height: 400px;
+			position: absolute;
+			left: 225px; top: 160px;
+		}
+
+		.img1 {
+			background-color: #DDCFD7;
+			width: 500px; height: 500px;
+			position: absolute; right: 0; top: 70px;
+			opacity: 0.4;
+			filter: grayscale(70%) blur(1px);
+
+		}
+
+		.img2 {
+			background-color: #DDCFD7;
+			width: 575px; height: 325px;
+			position: absolute; right: 0; top: 145px; margin-right: 150px;
+			box-shadow: 0px 6px 6px 6px grey;
+		}
+
+		.middle { height: 173px;}
+
+		.a1 { color: white; width: 580px; height: 170px;
+			margin-left: 200px; padding-top: 20px; padding-bottom: 20px}
+
+		.a2 {
+			position: absolute; left: 850px; top: 570px;
+		}
+
+		.explanation { width: 170px; height: 170px ; background-color: #FBD8DF; text-align: justify; font-size: 15px; padding-top: 45px; padding-right: 20px; padding-left: 20px; padding-bottom: 1px;display: inline-block; margin: 0;
+		}
+/*background-color: #171F36; background-position: center; background-size: contain;
+*/
+/*background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MjNfMjM4%2FMDAxNjI2OTk4ODg1MTI2.2y2eVr3Wz207KUYAZnb84ZCg5NZZmLXKyuTQoznXc_Yg.Iebt0jD1MB-7btBdvflbUc7wJV6aitcG-mWtqVG1ENUg.PNG.johigashi%2Fimage.png&type=sc960_832); background-repeat: no-repeat; background-size: 1100px 500px; background-position: center;
+			background-color: #171F36;
+			 height: 550px;
+			width: 100%;*/
+		.foot {
+			margin-top: 44px; height: 560px;
+			background-image: url(sml.jpg); 
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.title { color: white; 
+			font-family: 'Jua', sans-serif; font-size: 20px;
+			font-weight: normal; margin-left: 260px; padding-top: 30px;
+		}
+/*background-color: #E2106C*/
+		.video {
+			width: 640px; height: 360px; background-image: url(st.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 25px;
+			margin-left: 200px; margin-top: 30px;
+			box-shadow: 10px 10px #454D67;
+		}
+
+		.members {
+			width: 426px; height: 290px; background-color: white;
+			border-radius: 20px;
+			position: absolute; left: 870px; top: 905px;
+			box-shadow: 8px 8px #3D455C;
+			padding-top: 20px; padding-left: 25px;
+			color: #232F52;
+		}
+
+		.button1 {
+			background-color: #232F52; 
+			font-family: 'Jua', sans-serif; font-size: 18px;
+			width: 250px;
+			text-align: center; padding-top: 15px; padding-bottom: 15px;
+		}
+
+		.button2 {
+			background-color: #232F52; 
+			font-family: 'Jua', sans-serif; font-size: 18px;
+			width: 250px;
+			text-align: center; padding-top: 15px; padding-bottom: 15px;
+		}
+
+		.button1 > a { color: white; }
+		.button2 > a { color: white; }
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<h3>이슈만(20조)</h3>
+		<nav>
+			<a href="smtown.html">MAIN</a>
+			<a href="smtown_musicians.html">SUB1</a>
+			<a href="smtown_help.html">SUB2</a>
+		</nav>
+	</header>
+
+	<div class="up">
+		<div class="logo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/SM_Entertainment_Logo.svg/1070px-SM_Entertainment_Logo.svg.png" width="200px" height="200px" style="margin-left: 75px; margin-bottom: 20px;">
+			<hr style="background-color: #124098;">
+			<p style="text-align: center; color: #202020; font-weight: bold; margin-top: 20px; font-family: 'Black Han Sans', sans-serif; font-size: 15px; font-weight: 100;">
+				한국 엔터테이먼트 산업의 선구자이자 글로벌 한류 및<br>
+				K-Pop 열풍을 선도하는 종합 엔터테이먼트 그룹<br>
+				<span style="font-weight: normal; font-family: 'Noto Sans KR', sans-serif; font-size: 13px;color: #505050; padding-top: 10px;">
+					원본사이트 : <a href="https://www.smtown.com/">https://www.smtown.com/</a>
+				</span>
+			</p>
+		</div>
+	</div>
+<!-- https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F382%2F2018%2F03%2F22%2F0000633285_001_20180322065807276.jpg&type=sc960_832 -->
+<div>
+	<img src="https://t1.daumcdn.net/cfile/tistory/22345C3956D40F8304" class="img1"> 		<!-- 흰부분 상자 이미지들 -->
+	<img src="https://t1.daumcdn.net/cfile/tistory/22345C3956D40F8304" class="img2">			<!-- 들어갈 자리 -->
+</div>
+
+<div class="middle">
+	<div class="a1">
+		<h3 style="font-family: 'Jua', sans-serif; font-weight: normal; font-size: 20px;">GURU1 HTML 20조 [이슈만]</h3>
+		<p style="font-size: 16px;">해당 사이트 선정 이유 및 팀명 의미</p>
+		<p style="font-size: 14px;">
+			SM ENTERTAINMENT의 CEO이자 총괄프로듀서 이수만의 이름에서 영감을 받았다. 즉 이<br>수만 + SWU(서울여자대학교의 이니셜) '이슈만'으로 팀 이름을 선정하게 되었다.
+		</p>
+	</div>
+
+	<div class="a2">
+		<p class="explanation">
+			1) 코로나시대 속 비대면 콘텐츠 성장의 주역인 K-POP에 대한 관심을 직접 구현해보고자 3대 소속사 중 하나인 SM을 선택하였다.
+		</p><!-- 
+
+		 --><p class="explanation" style="background-color: white;">
+			2) 배너 이벤트 및 네비게이션바 등 동적인 요소와 정적인 요소가 적절하게 섞여 수업시간에 배운 내용을 다각도로 활용할 수 있다.
+		</p><!-- 
+
+	 	--><p class="explanation" style="background-color: #1C2442; color: white;">
+			3) 깔끔한 레이아웃과 선택적 수용이 가능한 정보들로 홈페이지가 구성되어 있어 구현하기 수월하다. <br>&nbsp;
+		</p>
+	</div>
+</div>
+
+<div class="foot">
+	<img src="play.png" width="30px" height="30px" style="position: absolute; left: 200px; top: 816px;">
+	<h3 class="title">설명 영상</h3>
+
+	<div class="video">
+		<!-- 유튜브 링크! -->
+
+		<p style="margin-left: 25px; padding-top: 25px; margin-bottom: 0; font-family: 'Jua', sans-serif; font-size: 20px; color: white;">시연영상</p>
+		<p style="font-size : 14px; color: white; margin-left: 25px; margin-top: 5px">링크 : <a href="" style="color: white;">https://youtu.be/sCSh1x89Vck </a></p>
+
+		<img src="play.png" width="80px" height="80px" style="margin-left: 280px; margin-top: 45px;">
+
+		<p class="button1" style="position: absolute; left: 200px ;top: 1115px;"><a href="https://youtu.be/sCSh1x89Vck">영상 바로가기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→</a></p>
+	</div>
+	
+
+	<div class="members">
+		<p>
+			이희진 : 조장, 서브페이지1 구성, 발표 동영상 제작
+		</p>
+		<p>
+			이정인 : 메인페이지 구성, 시작페이지 디자인, ppt제작
+		</p>
+		<p>
+			이하늘 : 메인페이지 구성, 시작페이지 제작
+		</p>
+		<p>
+			장서윤 : 서브페이지2 구성, 시작페이지 제작
+		</p>
+
+		<p class="button2" style="position: absolute; left: 0; top: 200px;"><a href="GURU1_team20_smtown.pptx">팀원소개 및 PPT &nbsp;&nbsp;→</a></p>
+
+	</div>
+</div>
+<footer>
+	2021 COPYRIGHT 이슈만(이희진, 이정인, 이하늘, 장서윤)
+</footer>
+
+	<a href="#" class="top">Top</a>
+
+</body>
+</html>
