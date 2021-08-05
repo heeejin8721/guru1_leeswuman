@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>SMTOWN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1140px">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="보아, 동방신기, 강타, 소녀시대, 샤이니, 슈퍼주니어, 슈퍼주니어-M, 에프엑스, f(x), 아라, 이연희, 천상지희, 트랙스, 김민종, 윤다훈, 틴틴파이브, 김경식, 홍록기, 표인봉, 장리인">
+    <meta name="description" content="음악, 드라마, 예능, 스포츠, 패션, 뉴미디어, 라이프스타일 등을 아우르는 아시아 최고엔터테인먼트 그룹">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" media="all" href="https://www.smtown.com/static/www/css/common.css?t=1627622629">
+
+    <!-- 상단 이미지의 동적 요소(공, 선) -->
+    <script src="https://www.smtown.com/static/www/js/jquery-1.11.3.min.js"></script>
+    <script src="https://www.smtown.com/static/www/js/common.js?t=1627622629"></script>
+
+    <!-- 상단 우측의 메뉴->로그인 시 팝업창 발생 -->
+    <script src="https://www.smtown.com/static/www/js/custom.js?t=1627622629"></script>
+
+    <script type="text/javascript">
+        var conAct='artistNews';
+        var domain='smtown.com';
+        var sub_domain='www';
+        var root_url='http://'+domain;
+        var file_domain='https://smcdn.smtown.com/file';
+        var ip_addr='15.0.2.7';
+        var browser_type='www';
+        var ie9 = false;
+        var sm_lang='ko';
+    </script>
+    <style type="text/css">
+
+    /* 폰트 적용*/
+    @font-face {
+        font-family: 'SourceHanSansKR';
+        src: url('./fonts/SourceHanSansKR-Light.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SourceHanSansKR-Light.otf')  format('opentype'),
+             url('./fonts/SourceHanSansKR-Light.woff') format('woff'), 
+             url('./fonts/SourceHanSansKR-Light.ttf')  format('truetype'), 
+             url('./fonts/SourceHanSansKR-Light.svg#SourceHanSansKR-Light') format('svg');
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SourceHanSansKR';
+        src: url('./fonts/SourceHanSansKR-Regular.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SourceHanSansKR-Regular.otf')  format('opentype'),
+             url('./fonts/SourceHanSansKR-Regular.woff') format('woff'), 
+             url('./fonts/SourceHanSansKR-Regular.ttf')  format('truetype'), 
+             url('./fonts/SourceHanSansKR-Regular.svg#SourceHanSansKR-Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SourceHanSansKR';
+        src: url('./fonts/SourceHanSansKR-Medium.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SourceHanSansKR-Medium.otf')  format('opentype'),
+             url('./fonts/SourceHanSansKR-Medium.woff') format('woff'), 
+             url('./fonts/SourceHanSansKR-Medium.ttf')  format('truetype'), 
+             url('./fonts/SourceHanSansKR-Medium.svg#SourceHanSansKR-Medium') format('svg');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SourceHanSansKR';
+        src: url('./fonts/SourceHanSansKR-Bold.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SourceHanSansKR-Bold.otf')  format('opentype'),
+             url('./fonts/SourceHanSansKR-Bold.woff') format('woff'), 
+             url('./fonts/SourceHanSansKR-Bold.ttf')  format('truetype'), 
+             url('./fonts/SourceHanSansKR-Bold.svg#SourceHanSansKR-Bold') format('svg');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SourceHanSansKR';
+        src: url('./fonts/SourceHanSansKR-Heavy.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SourceHanSansKR-Heavy.otf')  format('opentype'),
+             url('./fonts/SourceHanSansKR-Heavy.woff') format('woff'), 
+             url('./fonts/SourceHanSansKR-Heavy.ttf')  format('truetype'), 
+             url('./fonts/SourceHanSansKR-Heavy.svg#SourceHanSansKR-Heavy') format('svg');
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SmTown';
+        src: url('./fonts/SMTOWNOTF-Light.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SMTOWNOTF-Light.otf')  format('opentype'),
+             url('./fonts/SMTOWNOTF-Light.woff') format('woff'), 
+             url('./fonts/SMTOWNOTF-Light.ttf')  format('truetype'), 
+             url('./fonts/SMTOWNOTF-Light.svg#SMTOWNOTF-Light') format('svg');
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SmTown';
+        src: url('./fonts/SMTOWNOTF-Regular.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SMTOWNOTF-Regular.otf')  format('opentype'),
+             url('./fonts/SMTOWNOTF-Regular.woff') format('woff'), 
+             url('./fonts/SMTOWNOTF-Regular.ttf')  format('truetype'), 
+             url('./fonts/SMTOWNOTF-Regular.svg#SMTOWNOTF-Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SmTown';
+        src: url('./fonts/SMTOWNOTF-Medium.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SMTOWNOTF-Medium.otf')  format('opentype'),
+             url('./fonts/SMTOWNOTF-Medium.woff') format('woff'), 
+             url('./fonts/SMTOWNOTF-Medium.ttf')  format('truetype'), 
+             url('./fonts/SMTOWNOTF-Medium.svg#SMTOWNOTF-Medium') format('svg');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'SmTown';
+        src: url('./fonts/SMTOWNOTF-Bold.eot?#iefix') format('embedded-opentype'),  
+             url('./fonts/SMTOWNOTF-Bold.otf')  format('opentype'),
+             url('./fonts/SMTOWNOTF-Bold.woff') format('woff'), 
+             url('./fonts/SMTOWNOTF-Bold.ttf')  format('truetype'), 
+             url('./fonts/SMTOWNOTF-Bold.svg#SMTOWNOTF-Bold') format('svg');
+      font-weight: 700;
+      font-style: normal;
+    }
+    </style>
+
+    
+</head>
+
+<body>    
+
+    <!-- 상단 배너 -->    
+    <style type="text/css">
+
+            .banner_top_style .banner_box{position:relative}
+            
+            .banner_top_style .banner_box .btn_link{display:block; position:absolute; top:35px; font-size:17px; color:lightsteelblue;}
+            
+            .banner_top_style .smtownver1_link{display:block; height:100px}
+             
+            .banner_top_style .btn_close{display:block; position:absolute; right:35px;top:35px;width:30px;height:30px;text-align:left;text-indent:-9999px;background:url("https://smcdn.smtown.com/image/pc/popup/close.png") no-repeat center center;z-index:20}     
+    </style>
+
+    <!-- 상단 배너 배경 이미지 -->  
+    <div id="banner_topa" class="banner_top_style" style="display:block; background:url(https://smcdn.smtown.com/file/popup/202008/star_5f46014674ddb.jpg) no-repeat right center">
+
+        <!-- 상단 배너 클릭 시 발생하는 이벤트 --> 
+            <a href="smtown_musicians_ver1.html" target="_blink" class="smtownver1_link">
+                <div class="contains">
+                    <div class="banner_box">
+                        <b class="btn_link">SMTOWN의 서브페이지 'Musicians'의 구현 초기가 궁금하다면?!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;click <img src="msicon.jpg" width="30px"> &lt;&lt;&lt; </b> 
+                    </div>
+                </div>
+            </a>
+
+            <!-- X 아이콘 -->
+            <a href="#" title="닫기" class="btn_close"> </a> 
+    </div>
+
+    <script type="text/javascript">
+        $(function() { 
+                        $('#header').addClass('tpopup');
+                    
+                        $('#banner_topa .btn_close').on('click', function(e) {
+                    e.preventDefault();
+                                        $('#header').addClass('ani');
+                                    if($('#banner_topa').find('input[type=checkbox]').attr('checked') == 'checked') setCookie('banner_topaClose', 'Y', 1, domain);
+                    $(this).hide();
+                    $('#banner_topa').slideUp('fast', function(){
+                        $('#banner_topa').remove();
+                        $('#header').removeClass('ani');
+                    });
+
+                                        $('#header').addClass('ani');
+                        $('#header').removeClass('tpopup');
+                });
+
+                $('#banner_topa .check_box').on('click', function() { 
+                    if($(this).hasClass('on') == true) { 
+                        $(this).removeClass('on');
+                        $(this).removeClass('active');
+                        $(this).find('input[type=checkbox]').attr('checked', false);
+                    } else { 
+                        $(this).addClass('on');
+                        $(this).addClass('active');
+                        $(this).find('input[type=checkbox]').attr('checked', true);
+                    }
+                });
+            });
+    </script>
+<!-- 상단 배너 끝 --> 
+
+<div id="viewport">
+    <!-- 헤더 -->
+        <div id="header" class="black">
+            <div class="header_box">
+				<div class="header_box2">
+                    
+                    <!-- 구현한 메인페이지로 이동 -->
+					<h1 class="logo"><a href="smtown.html" title="SMTOWN" class="btn_logo">SMTOWN</a></h1>
+					<ul class="gnb">
+
+                        <!-- 구현한 뮤지션 서브페이지로만 이동-->
+						<li><a href="smtown_musicians.html"><strong>Musicians</strong></a></li>
+						<li><h1><font size="3px"><strong>Actors</strong></font></h1></li>
+						<li><h1><font size="3px"><strong>Entertainers</strong></font></h1></li>
+						<li><h1><font size="3px"><strong>Models</strong></font></h1></li>
+						<li><h1><font size="3px"><strong>Athletes</strong></font></h1></li>
+					</ul>
+					
+                    <!-- 검색(아이콘) -->
+                    <a href="#" title="검색" class="btn_search">검색</a>
+                    <!-- 검색 -->
+					<div class="popup_search">
+						<!-- 검색 시 form data를 get method로 전송
+                        <form id="frmSearch" method="get" action="/search"> -->
+						<input type="text" name="keyword" class="input_search">
+						<!-- </form> -->
+					</div>
+
+                    <!-- 메뉴(아이콘) -->
+					<a href="#" title="메뉴" class="btn_menu">메뉴</a>
+					<!-- 메뉴 -->
+					<div class="popup_menu">
+						<ul class="menu_list">
+							<li>Music Video</li>
+							<li>Album</li>
+							<li>News &amp; Notice</a></li>
+							<li>Audition</li>
+						</ul>
+                        
+                        <!-- 로그인 -->
+						<div class="menu_bottom">
+							<div class="btn_box">
+							     <a href="#" class="btn_login">Login</a>
+							</div>
+                            
+                            <!-- 언어 -->
+							<div id="sm_menu_lang" class="btn_box lang">
+							    <ul>
+								    <li><a href="#" data-lang='ko' class="btn_language active">한국어</a></li>
+							    </ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+            </div>
+        </div>
+
+        <div id="content">
+
+			<div class="sub_musician">
+
+                <!-- 상단 배경 사람 이미지 -->
+                <div class="sub_visual bg_cover" style="background-image:url(https://smcdn.smtown.com/file/fix/star_5aabdc4f25bbe.jpg)">
+                    <div class="contains">
+
+                        <!-- 상단 배경 선 이미지-->
+                        <img src="https://smcdn.smtown.com/image/pc/musician/bg_line.png" alt="" class="obj_line">
+                        <div class="obj_circle" style="background:#fae2e8"></div>
+
+                    </div>
+                </div>
+
+                <div class="sub_main">
+
+                    <div class="contains">
+
+                        <!-- News/Musicians 항목 위 Musicians(텍스트) -->
+                        <div class="sub_title_box">
+                            <div class="title_scroll">
+                                <h2 class="title"><br>Musicians</h2>
+                            </div>
+                        </div>
+
+                        <!-- News -->
+                        <div class="list_tab">
+                            <a class="btn_tab active">News</a>
+                            <a href="https://www.smtown.com/artist/list/1" class="btn_tab">Musicians</a>
+                        </div>
+
+                        <div class="column_list">
+                            <div class="column_box">
+
+                                <!-- News 메인 내용(좌) -->
+                                <a href="https://www.smtown.com/artist/newsDetail/5262" class="btn_top bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_6102509c9ef2c.jpg)">
+                                    <span class="shadow"></span>
+                                    <span class="text">
+                                        <span class="name"></span>
+                                        <span class="title">SM 유영진, 美 빌보드 ‘21세기 가장 뛰어난 프로듀서’ 선정!</span>
+                                    </span>
+                                </a>
+
+                                <!-- News 메인 아래 내용 -->
+                                <ul id="list_main1" class="list_main">
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5263" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_610362e342b5d.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5263" class="btn_text">
+                                            <span class="title">‘엠카’ 루시, ‘BTS->아이유’ 히트곡 매시업 무대 선보여...밴드 사운드 '신선' </span>
+                                            <span class="text">4인조 밴드 LUCY(루시)가 엠카운트다운 무대를 화려하게 장식했다.</span>
+                                            <span class="date">2021. 07. 29</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5253" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60ff7b28e23e1.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5253" class="btn_text">
+                                            <span class="title">엑소 디오, 첫 솔로 앨범 ‘공감’ 글로벌 차트 강타! 아이튠즈 톱 앨범 차트 전 세계 59개 지역 1위!</span>
+                                            <span class="text">‘음색 끝판왕’ 엑소 디오(에스엠엔터테인먼트 소속)가 첫 솔로 앨범 발매와 동시에 글로벌 차트 1위를 휩쓸었다.</span>
+                                            <span class="date">2021. 07. 27</span>
+                                        </a>
+                                    </li>
+
+                                     <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5251" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60ff7a7542143.jpg)"></a>
+                                        <a href="/artist/newsDetail/5251" class="btn_text">
+                                            <span class="title">레드벨벳, 8월 1일 데뷔 7주년 기념 스페셜 V LIVE 진행!</span>
+                                            <span class="text">레드벨벳(Red Velvet, 에스엠엔터테인먼트 소속)이 데뷔 7주년을 맞아 스페셜 라이브 방송으로 팬들과 만난다.</span>
+                                            <span class="date">2021. 07. 27</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5246" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60fe2b2896f34.jpg)"></a>
+                                        <a href="/artist/newsDetail/5246" class="btn_text">
+                                            <span class="title">엑소 디오, 첫 솔로 앨범 ‘공감’ 26일 발매! 꿀보이스+어쿠스틱 귀호강 선사!</span>
+                                            <span class="text">‘음색 끝판왕’ 엑소 디오(에스엠엔터테인먼트 소속)의 첫 솔로 앨범 ‘공감’이 26일 발매된다.</span>
+                                            <span class="date">2021. 07. 26</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5244" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60fe2a325d235.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5244" class="btn_text">
+                                            <span class="title">‘8월 컴백’ 레드벨벳, 신비로운 분위기의 아카이브 비디오 공개 화제!</span>
+                                            <span class="text">8월 컴백을 예고한 레드벨벳(Red Velvet, 에스엠엔터테인먼트 소속)의 새로운 모습이 담긴 아카이브 비디오가 공개되어 화제다. </span>
+                                            <span class="date">2021. 07. 26</span>
+                                        </a>
+                                    </li>
+                                                                        
+                                </ul>
+                            </div>
+                            
+
+                            <!-- News 메인 내용(우) -->
+                            <div class="column_box">
+                                <a href="https://www.smtown.com/artist/newsDetail/5261" class="btn_top bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_61021b4fd4042.jpg)">
+                                    <span class="shadow"></span>
+                                    <span class="text">
+                                        <span class="name"></span>
+                                        <span class="title">샤이니 日 미니앨범 ‘SUPERSTAR’ 오리콘 데일리 1위!</span>
+                                    </span>
+                                </a>
+                                 
+                                <!-- News 메인 아래 내용 -->                               
+                                <ul id="list_main2" class="list_main">
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5258" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_6100c9a4207bc.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5258" class="btn_text">
+                                            <span class="title">강타 데뷔 25주년 프로젝트 두 번째 싱글 ‘7월의 크리스마스’ 28일 공개! </span>
+                                            <span class="text">‘레전드 감성 보컬리스트’ 강타(에스엠엔터테인먼트 소속)의 데뷔 25주년 프로젝트 두 번째 싱글 ‘7월의 크리스마스 (Christmas in July)’가 28일 공개된다. </span>
+                                            <span class="date">2021. 07. 28</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5252" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60ff7aca7537f.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5252" class="btn_text">
+                                            <span class="title">강타, 신곡 ‘7월의 크리스마스’ MV 티저 27일 오후 6시 공개!</span>
+                                            <span class="text">강타(에스엠엔터테인먼트 소속)가 27일 오후 6시 새 싱글 타이틀 곡 ‘7월의 크리스마스 (Christmas in July)’ 뮤직비디오 티저를 공개한다.  </span>
+                                            <span class="date">2021. 07. 27</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5247" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60ff6ae1cfe24.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5247" class="btn_text">
+                                            <span class="title">윤종신표 시티팝 ‘아마추어’, ‘월간 윤종신’ 7월호로 리페어…오늘(27일) 발매 </span>
+                                            <span class="text">가수 윤종신의 월간 음악 프로젝트 ‘월간 윤종신’ 7월호가 오늘(27일) 공개된다.</span>
+                                            <span class="date">2021. 07. 27</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/artist/newsDetail/5245" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60fe2aa37d446.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5245" class="btn_text">
+                                            <span class="title">강타 신곡 ‘7월의 크리스마스’, 강타표 감성 녹인 알앤비 팝 곡!</span>
+                                            <span class="text">‘레전드 감성 보컬리스트’ 강타(에스엠엔터테인먼트 소속)가 오는 28일 공개하는 새 싱글 ‘7월의 크리스마스 (Christmas in July)’로 독보적인 감성을 선사한다. </span>
+                                            <span class="date">2021. 07. 26</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5242" class="btn_img bg_cover" style="background:url(https://smcdn.smtown.com/file/newsfeed/202107/star_60fe291dd51e2.jpg)"></a>
+                                        <a href="https://www.smtown.com/artist/newsDetail/5242" class="btn_text">
+                                            <span class="title">슈퍼주니어, 대만 최대 음악 사이트 ‘KKBOX’서 ‘2021 상반기 한국 가수’ 1위 선정!</span>
+                                            <span class="text">슈퍼주니어가 대만 최대 온라인 음악 사이트 ‘KKBOX’ 선정 ‘2021 KKBOX Mid-Year Top 5 Korean Singers’(2021 KKBOX 상반기 톱 5 한국 가수)에서 1위에 올랐다.</span>
+                                            <span class="date">2021. 07. 24</span>
+                                        </a>
+                                    </li>                               
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+                        <!-- more 구현 실패
+                        <div class="page_btn">
+                            <a href="#" id="btnMore" class="btn_line btn_more">MORE</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- more 구현 실패 
+            <script type="text/javascript">
+            $(function(){
+                var nPage = 1;
+                console.log('page_cookie : '+getCookie('artist_news_1_page'));
+                $('#btnMore').click(function(evt){
+                    evt.preventDefault();
+                    nPage++;
+                    $.post("/artist/newsItem",{
+                        "page":nPage,
+                        "cate_idx":'1'
+                    },function(oJson){
+                        
+                        if(oJson['total'] < 11 || parseInt(nPage)*10 >= parseInt(oJson['total'])) $('#btnMore').hide();
+                        else $('#btnMore').show();
+                        
+                        if(oJson["list"].length == 0) { 
+                            $('#btnMore').hide();
+                            return; 
+                        }
+                        console.log('nPage : '+nPage);
+                        setCookie('artist_news_1_page', nPage, 1, '/');
+                        $.each(oJson["list"],function(nIdx,oData){
+                            var oTarget = ((nIdx%2)==0)?$("#list_main1"):$("#list_main2");
+                            var szImgUrl = 'https://smcdn.smtown.com/file'+oData["pc_image_url"];
+                            var arDateInfo    = oData["reg_date"].split(" ");
+                            var arDate        = arDateInfo[0].split('-');
+                            var szCode = '<li>';
+                            szCode += '<a href="/artist/newsDetail/'+oData["subnews_idx"]+'" class="btn_img bg_cover" style="background:url('+szImgUrl+')"></a>';
+                            szCode += '<a href="/artist/newsDetail/'+oData["subnews_idx"]+'" class="btn_text">';
+                            szCode += '<span class="title">'+oData["title"]+'</span>';
+                            szCode += '<span class="text">'+oData["sub_title"]+'</span>';
+                            szCode += '<span class="date">'+arDate[0]+'. '+arDate[1]+'. '+arDate[2]+'</span>';
+                            szCode += '</a></li>';
+                            oTarget.append(szCode);
+                            
+                        });
+                        
+                    },'json');
+                });
+                
+            });
+            </script> -->
+
+        </div> <!-- <div id="content"> 종료 -->
+
+        
+    <!-- 푸터 -->
+    <div id="footer">
+        <div class="footer_box">
+            <h6 class="logo"><img src="https://smcdn.smtown.com/image/pc/common/ft_logo.png"></h6>
+            <ul class="footer_menu">
+                <li><h2>&nbsp회사소개&nbsp&nbsp</h2></li>
+                <li><a href="smtown_use.html" target="_blank" class="btn_link"><h4>이용약관</h4></a></li>
+                <li><h2>&nbsp&nbsp개인정보처리방침&nbsp&nbsp</h2></li>
+                <li><a href="smtown_help.html" target="_blank" class="btn_link"><h4>고객센터</h4></a></li>
+                <li class="select_site">
+                    <select class="select_box familysite">
+                        <option value=""><h2>Family site</h2></option>
+                        <option value="http://now.smtown.com">SMTOWNnow</option>
+                        <option value="http://www.smtownland.com">SMTOWN@coexartium</option>
+                        <option value="http://www.smt-seoul.com">SMT SEOUL</option>
+                        <option value="https://www.instagram.com/smrookies/">SMROOKIES</option>
+                        <option value="http://www.everysing.com">everysing</option>
+                        <option value="http://www.smcultureandcontents.com">SM C&C</option>
+                        <option value="http://www.smtowntravel.com">에스엠타운 트래블</option>
+                        <option value="http://www.tourexpress.com">투어익스프레스</option>
+                        <option value="http://www.hoteltrees.com/">호텔트리스</option>
+                        <option value="http://global.smtowntravel.com">SM GLOBAL PACKAGE</option>
+                        <option value="https://smtown.jp/">SM JAPAN</option>
+                        <option value="http://www.dreammakerlive.com/">Dream Maker</option>
+                        <option value="http://galaxiasme.com/">GalaxiaSM</option>
+                        <option value="http://esteemgroup.com/">Esteem</option>
+                        <option value="http://mystic89.net/">MYSTIC STORY</option>
+                        <option value="http://smglobalshop.com">SM GLOBAL SHOP</option>
+                        <option value="http://www.SMTOWNandSTORE.com">SMTOWN &STORE</option>
+                        <option value="https://smartstore.naver.com/celebrand">CELEBRAND</option>
+                    </select>
+                </li>
+            </ul>
+
+            <p>Copyrightⓒ2013 SM ENTERTAINMENT Co., Ltd. All rights reserved.</p>
+
+            <div class="sns_menu">
+                <a href="https://www.facebook.com/smtown" target="_blank" class="btn_sns"><img src="https://smcdn.smtown.com/image/pc/common/icon_ft_facebook.png" alt="페이스북" class="icon"></a>
+                <a href="https://twitter.com/SMTOWNGLOBAL" target="_blank" class="btn_sns"><img src="https://smcdn.smtown.com/image/pc/common/icon_ft_twitter.png" alt="트위터" class="icon"></a>
+                <a href="https://weibo.com/smtown" target="_blank" class="btn_sns"><img src="https://smcdn.smtown.com/image/pc/common/icon_ft_weibo.png" alt="웨이보" class="icon"></a>
+                <a href="https://www.youtube.com/channel/UCEf_Bc-KVd7onSeifS3py9g" target="_blank" class="btn_sns"><img src="https://smcdn.smtown.com/image/pc/common/icon_ft_youtube.png" alt="유튜브" class="icon"></a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript"></script>
+</body>
+</html>
